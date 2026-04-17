@@ -46,11 +46,13 @@ if (currentTheme === 'light') {
 }
 
 themeToggle.addEventListener('click', () => {
+    console.log('Theme toggle clicked');
     document.body.classList.toggle('light-mode');
     let theme = 'dark';
     if (document.body.classList.contains('light-mode')) {
         theme = 'light';
     }
+    console.log('Current theme set to:', theme);
     localStorage.setItem('theme', theme);
 });
 
